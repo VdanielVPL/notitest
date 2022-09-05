@@ -6,6 +6,7 @@ import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import android.view.WindowManager
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
@@ -17,7 +18,6 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         val button1 = findViewById<Button>(R.id.button1)
-
         val text1HelloWorld = findViewById<TextView>(R.id.textview1)
         val edittext = findViewById<EditText>(R.id.editText1)
         val edittextName = findViewById<EditText>(R.id.editText2)
