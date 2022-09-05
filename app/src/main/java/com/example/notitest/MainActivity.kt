@@ -56,6 +56,16 @@ class MainActivity : AppCompatActivity() {
                 with(NotificationManagerCompat.from(this)){
                     notify(1, builder1.build())
                 }
+            }else{
+                val builder1 = NotificationCompat.Builder(this, "jakischannelid")
+                    .setSmallIcon(R.mipmap.ic_launcher_round)
+                    .setContentTitle("Domyślny tytuł")
+                    //.setContentText("textUp")
+                    .setContentText("Domyślny tekst powiadomienia")
+                    .setPriority(NotificationCompat.PRIORITY_DEFAULT)
+                with(NotificationManagerCompat.from(this)){
+                    notify(2, builder1.build())
+                }
             }
         }
     }
