@@ -2,4 +2,8 @@
     <string name="app_name">Notification Test</string>
     <string name="my_shortcut">Open test app</string>
     <string name="my_shortcut_disabled">Cos test shortcut off</string>
+    <string name="sent_noti">Notification sent</string>
+    <string name="default_title">Default title</string>
+    <string name="default_text">Default notification text</string>
+    <string name="noti_desc">Description of this notification is amazing</string>
 </resources>

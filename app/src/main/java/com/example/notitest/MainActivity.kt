@@ -6,10 +6,10 @@ import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import android.view.WindowManager
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
+import android.widget.Toast
 import androidx.core.app.NotificationCompat
 import androidx.core.app.NotificationManagerCompat
 
@@ -22,12 +22,11 @@ class MainActivity : AppCompatActivity() {
         val edittext = findViewById<EditText>(R.id.editText1)
         val edittextName = findViewById<EditText>(R.id.editText2)
         val name = "Testowe powiadomienie"
-        this.title = "Testowa aplikacja"
-
+        this.title = getString(R.string.app_name)
         text1HelloWorld.visibility = View.INVISIBLE
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-            val descriptionText = "Opis tego powiadomienia jest genialny"
+            val descriptionText = getString(R.string.noti_desc)
             val importance = NotificationManager.IMPORTANCE_DEFAULT
             val mChannel = NotificationChannel("jakischannelid", name, importance)
             mChannel.description = descriptionText
@@ -56,16 +55,18 @@ class MainActivity : AppCompatActivity() {
                 with(NotificationManagerCompat.from(this)){
                     notify(1, builder1.build())
                 }
+                Toast.makeText(applicationContext,getString(R.string.sent_noti),Toast.LENGTH_SHORT).show()
             }else{
                 val builder1 = NotificationCompat.Builder(this, "jakischannelid")
                     .setSmallIcon(R.mipmap.ic_launcher_round)
-                    .setContentTitle("Domyślny tytuł")
+                    .setContentTitle(getString(R.string.default_title))
                     //.setContentText("textUp")
-                    .setContentText("Domyślny tekst powiadomienia")
+                    .setContentText(getString(R.string.default_text))
                     .setPriority(NotificationCompat.PRIORITY_DEFAULT)
                 with(NotificationManagerCompat.from(this)){
                     notify(2, builder1.build())
                 }
+                Toast.makeText(applicationContext,getString(R.string.sent_noti),Toast.LENGTH_SHORT).show()
             }
         }
     }

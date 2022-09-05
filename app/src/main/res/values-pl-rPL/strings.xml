@@ -3,4 +3,8 @@
     <string name="app_name">Test powiadomienia</string>
     <string name="my_shortcut">Otwórz aplikację testową</string>
     <string name="my_shortcut_disabled">Cos testowy skrót wyłączony</string>
+    <string name="sent_noti">Wysłano powiadomienie</string>
+    <string name="default_title">Domyślny tytuł</string>
+    <string name="default_text">Domyslny tekst powiadomienia</string>
+    <string name="noti_desc">Opis tego powiadomienia jest genialny</string>
 </resources>
