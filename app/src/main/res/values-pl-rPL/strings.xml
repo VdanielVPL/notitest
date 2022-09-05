@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Test powiadomienia</string>
+    <string name="my_shortcut">Otwórz aplikację testową</string>
+    <string name="my_shortcut_disabled">Cos testowy skrót wyłączony</string>
+</resources>

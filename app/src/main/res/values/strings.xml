@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Notification Test</string>
+    <string name="my_shortcut">Open test app</string>
+    <string name="my_shortcut_disabled">Cos test shortcut off</string>
+</resources>
