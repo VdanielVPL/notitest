@@ -7,4 +7,6 @@
     <string name="default_title">Domyślny tytuł</string>
     <string name="default_text">Domyslny tekst powiadomienia</string>
     <string name="noti_desc">Opis tego powiadomienia jest genialny</string>
+    <string name="noti_title_hint">Nazwa powiadomienia</string>
+    <string name="noti_text_hint">Tekst powiadomienia</string>
 </resources>

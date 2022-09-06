@@ -6,4 +6,6 @@
     <string name="default_title">Default title</string>
     <string name="default_text">Default notification text</string>
     <string name="noti_desc">Description of this notification is amazing</string>
+    <string name="noti_title_hint">Notification name</string>
+    <string name="noti_text_hint">Notification text</string>
 </resources>
