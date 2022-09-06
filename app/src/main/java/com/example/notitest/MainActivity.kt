@@ -21,7 +21,7 @@ class MainActivity : AppCompatActivity() {
         val text1HelloWorld = findViewById<TextView>(R.id.textview1)
         val edittext = findViewById<EditText>(R.id.editText1)
         val edittextName = findViewById<EditText>(R.id.editText2)
-        val name = "Testowe powiadomienie"
+        val name = getString(R.string.test_noti)
         this.title = getString(R.string.app_name)
         text1HelloWorld.visibility = View.INVISIBLE
 
