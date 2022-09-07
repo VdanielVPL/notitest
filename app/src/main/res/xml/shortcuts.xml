@@ -1,9 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<shortcuts xmlns:android="http://schemas.android.com/apk/res/android">
+<shortcuts xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <capability
+        android:name="custom.actions.intent.SEND_TEST_NOTI"
+        app:queryPatterns="@array/queriesTest">
+        <intent
+            android:action="custom.actions.intent.SEND_TEST_NOTI"
+            android:targetPackage="com.example.notitest"
+            android:targetClass="com.example.notitest.MainActivity"
+            />
+    </capability>
     <shortcut
-        android:shortcutId="myshortcut"
+        android:shortcutId="openappshortcut"
         android:enabled="true"
-        android:icon="@drawable/ic_launcher_background"
+        android:icon="@mipmap/ic_launcher"
         android:shortcutShortLabel="@string/my_shortcut"
         android:shortcutLongLabel="@string/my_shortcut"
         android:shortcutDisabledMessage="@string/my_shortcut_disabled">
@@ -12,6 +22,20 @@
             android:targetPackage="com.example.notitest"
             android:targetClass="com.example.notitest.MainActivity"
             />
-        <categories android:name="android.shortcut.conversation"/>
+    </shortcut>
+    <shortcut
+        android:shortcutId="sendnotishortcut"
+        android:enabled="true"
+        android:icon="@mipmap/ic_launcher"
+        android:shortcutShortLabel="@string/send_noti_shortcut"
+        android:shortcutLongLabel="@string/send_noti_shortcut"
+        android:shortcutDisabledMessage="@string/send_noti_shortcut">
+        <intent
+            android:action="custom.actions.intent.SEND_TEST_NOTI"
+            android:targetPackage="com.example.notitest"
+            android:targetClass="com.example.notitest.MainActivity"
+
+            />
+
     </shortcut>
 </shortcuts>

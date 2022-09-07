@@ -10,4 +10,8 @@
     <string name="noti_text_hint">Notification text</string>
     <string name="button_text">Send notification</string>
     <string name="test_noti">Test notification</string>
+    <string name="send_noti_shortcut">Send test notification</string>
+    <string-array name="queriesTest">
+        <item>send test notification</item>
+    </string-array>
 </resources>

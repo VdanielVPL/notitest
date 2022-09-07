@@ -11,4 +11,5 @@
     <string name="noti_text_hint">Tekst powiadomienia</string>
     <string name="button_text">Wyślij powiadomienie</string>
     <string name="test_noti">Testowe powiadomienie</string>
+    <string name="send_noti_shortcut">Wyślij testowe powiadomienie</string>
 </resources>

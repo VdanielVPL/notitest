@@ -1,4 +1,4 @@
-package com.example.notitest
+package com.mand.notitest
 
 import org.junit.Test
 

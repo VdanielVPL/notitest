@@ -1,4 +1,4 @@
-package com.example.notitest
+package com.mand.notitest
 import android.app.NotificationChannel
 import android.app.NotificationManager
 import android.graphics.Color
@@ -39,6 +39,18 @@ class MainActivity : AppCompatActivity() {
                 //addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS)
                 //decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
                 statusBarColor = Color.TRANSPARENT
+            }
+        }
+        var intent = getIntent()
+        if(intent!!.action == "custom.actions.intent.SEND_TEST_NOTI"){
+            val builder1 = NotificationCompat.Builder(this, "jakischannelid")
+                .setSmallIcon(R.mipmap.ic_launcher_round)
+                .setContentTitle(getString(R.string.default_title))
+                //.setContentText("textUp")
+                .setContentText(getString(R.string.default_text))
+                .setPriority(NotificationCompat.PRIORITY_DEFAULT)
+            with(NotificationManagerCompat.from(this)){
+                notify(3, builder1.build())
             }
         }
         //przycisk onclick
