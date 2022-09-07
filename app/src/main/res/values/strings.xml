@@ -13,5 +13,6 @@
     <string name="send_noti_shortcut">Send test notification</string>
     <string-array name="queriesTest">
         <item>send test notification</item>
+        <item>Wyślij powiadomienie</item>
     </string-array>
 </resources>

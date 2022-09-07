@@ -2,7 +2,7 @@
 <shortcuts xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <capability
-        android:name="custom.actions.intent.SEND_TEST_NOTI"
+        android:name="custom.actions.intent.SEND_TEST_NOTI1"
         app:queryPatterns="@array/queriesTest">
         <intent
             android:action="custom.actions.intent.SEND_TEST_NOTI"
