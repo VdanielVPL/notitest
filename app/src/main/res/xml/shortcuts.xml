@@ -6,8 +6,8 @@
         app:queryPatterns="@array/queriesTest">
         <intent
             android:action="custom.actions.intent.SEND_TEST_NOTI"
-            android:targetPackage="com.example.notitest"
-            android:targetClass="com.example.notitest.MainActivity"
+            android:targetPackage="com.mand.notitest"
+            android:targetClass="com.mand.notitest.MainActivity"
             />
     </capability>
     <shortcut
@@ -19,8 +19,8 @@
         android:shortcutDisabledMessage="@string/my_shortcut_disabled">
         <intent
             android:action="android.intent.action.VIEW"
-            android:targetPackage="com.example.notitest"
-            android:targetClass="com.example.notitest.MainActivity"
+            android:targetPackage="com.mand.notitest"
+            android:targetClass="com.mand.notitest.MainActivity"
             />
     </shortcut>
     <shortcut
@@ -32,8 +32,8 @@
         android:shortcutDisabledMessage="@string/send_noti_shortcut">
         <intent
             android:action="custom.actions.intent.SEND_TEST_NOTI"
-            android:targetPackage="com.example.notitest"
-            android:targetClass="com.example.notitest.MainActivity"
+            android:targetPackage="com.mand.notitest"
+            android:targetClass="com.mand.notitest.MainActivity"
 
             />
 
