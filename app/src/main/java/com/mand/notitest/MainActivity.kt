@@ -41,18 +41,6 @@ class MainActivity : AppCompatActivity() {
                 statusBarColor = Color.TRANSPARENT
             }
         }
-        var intent = getIntent()
-        if(intent!!.action == "custom.actions.intent.SEND_TEST_NOTI"){
-            val builder1 = NotificationCompat.Builder(this, "jakischannelid")
-                .setSmallIcon(R.mipmap.ic_launcher_round)
-                .setContentTitle(getString(R.string.default_title))
-                //.setContentText("textUp")
-                .setContentText(getString(R.string.default_text))
-                .setPriority(NotificationCompat.PRIORITY_DEFAULT)
-            with(NotificationManagerCompat.from(this)){
-                notify(3, builder1.build())
-            }
-        }
         //przycisk onclick
         button1.setOnClickListener{
             //var textUp = "Siema "+text1HelloWorld.text
@@ -79,6 +67,18 @@ class MainActivity : AppCompatActivity() {
                     notify(2, builder1.build())
                 }
                 Toast.makeText(applicationContext,getString(R.string.sent_noti),Toast.LENGTH_SHORT).show()
+            }
+        }
+        var intent = getIntent()
+        if(intent!!.action == "custom.actions.intent.SEND_TEST_NOTI"){
+            val builder1 = NotificationCompat.Builder(this, "jakischannelid")
+                .setSmallIcon(R.mipmap.ic_launcher_round)
+                .setContentTitle(getString(R.string.default_title))
+                //.setContentText("textUp")
+                .setContentText(getString(R.string.default_text))
+                .setPriority(NotificationCompat.PRIORITY_DEFAULT)
+            with(NotificationManagerCompat.from(this)){
+                notify(3, builder1.build())
             }
         }
     }

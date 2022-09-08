@@ -1,4 +1,4 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
     <string name="app_name">Notification Test</string>
     <string name="my_shortcut">Open test app</string>
     <string name="my_shortcut_disabled">Cos test shortcut off</string>
@@ -11,8 +11,12 @@
     <string name="button_text">Send notification</string>
     <string name="test_noti">Test notification</string>
     <string name="send_noti_shortcut">Send test notification</string>
-    <string-array name="queriesTest">
+    <string-array name="queriesTest" tools:ignore="InconsistentArrays">
         <item>send test notification</item>
-        <item>Wyślij powiadomienie</item>
+        <item>open Notification Test and send test notification</item>
+        <item>send notification</item>
+        <item>test notification</item>
+        <item>open Notification Test and test notification</item>
+        <item>test noti</item>
     </string-array>
 </resources>

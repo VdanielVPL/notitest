@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
     <string name="app_name">Test powiadomienia</string>
     <string name="my_shortcut">Otwórz aplikację testową</string>
     <string name="my_shortcut_disabled">Cos testowy skrót wyłączony</string>
@@ -12,8 +12,19 @@
     <string name="button_text">Wyślij powiadomienie</string>
     <string name="test_noti">Testowe powiadomienie</string>
     <string name="send_noti_shortcut">Wyślij testowe powiadomienie</string>
-    <string-array name="queriesTest">
+    <string-array name="queriesTest" tools:ignore="InconsistentArrays">
         <item>send test notification</item>
-        <item>Wyślij powiadomienie</item>
+        <item>open Notification Test and send test notification</item>
+        <item>send notification</item>
+        <item>test notification</item>
+        <item>open Notification Test and test notification</item>
+        <item>test noti</item>
+        <item>wyślij powiadomienie</item>
+        <item>wyślij testowe powiadomienie</item>
+        <item>otwórz aplikację Notification Test i wyślij powiadomienie</item>
+        <item>otwórz aplikację Notification Test i wyślij testowe powiadomienie</item>
+        <item>otwórz Notification Test i wyślij powiadomienie</item>
+        <item>otwórz Notification Test i wyślij testowe powiadomienie</item>
+        <item>testuj powiadomienie</item>
     </string-array>
 </resources>

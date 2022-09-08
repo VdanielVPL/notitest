@@ -4,6 +4,17 @@ plugins {
 }
 
 android {
+    signingConfigs {
+        debug {
+            storeFile file('E:\\Programy\\AndroidStudioRelease\\key.jks')
+            keyAlias 'key0'
+            storePassword 'superzaawansowanehaslo'
+            keyPassword 'superzaawansowanehaslo'
+        }
+        release {
+            storeFile file('E:\\Programy\\AndroidStudioRelease\\key.jks')
+        }
+    }
     compileSdk 32
 
     defaultConfig {
