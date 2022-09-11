@@ -13,7 +13,7 @@
     <shortcut
         android:shortcutId="openappshortcut"
         android:enabled="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/ic_notitest"
         android:shortcutShortLabel="@string/my_shortcut"
         android:shortcutLongLabel="@string/my_shortcut"
         android:shortcutDisabledMessage="@string/my_shortcut_disabled">
@@ -26,7 +26,7 @@
     <shortcut
         android:shortcutId="sendnotishortcut"
         android:enabled="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/ic_notitest"
         android:shortcutShortLabel="@string/send_noti_shortcut"
         android:shortcutLongLabel="@string/send_noti_shortcut"
         android:shortcutDisabledMessage="@string/send_noti_shortcut">

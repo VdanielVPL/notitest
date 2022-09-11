@@ -47,7 +47,7 @@ class MainActivity : AppCompatActivity() {
             //powiadomienie
             if (edittext.text.toString() != "" && edittextName.text.toString() != ""){
                 val builder1 = NotificationCompat.Builder(this, "jakischannelid")
-                    .setSmallIcon(R.mipmap.ic_launcher_round)
+                    .setSmallIcon(R.mipmap.ic_notitest)
                     .setContentTitle(edittextName.text)
                     //.setContentText("textUp")
                     .setContentText(edittext.text)
@@ -58,7 +58,7 @@ class MainActivity : AppCompatActivity() {
                 Toast.makeText(applicationContext,getString(R.string.sent_noti),Toast.LENGTH_SHORT).show()
             }else{
                 val builder1 = NotificationCompat.Builder(this, "jakischannelid")
-                    .setSmallIcon(R.mipmap.ic_launcher_round)
+                    .setSmallIcon(R.mipmap.ic_notitest)
                     .setContentTitle(getString(R.string.default_title))
                     //.setContentText("textUp")
                     .setContentText(getString(R.string.default_text))
@@ -72,7 +72,7 @@ class MainActivity : AppCompatActivity() {
         var intent = getIntent()
         if(intent!!.action == "custom.actions.intent.SEND_TEST_NOTI"){
             val builder1 = NotificationCompat.Builder(this, "jakischannelid")
-                .setSmallIcon(R.mipmap.ic_launcher_round)
+                .setSmallIcon(R.mipmap.ic_notitest)
                 .setContentTitle(getString(R.string.default_title))
                 //.setContentText("textUp")
                 .setContentText(getString(R.string.default_text))
