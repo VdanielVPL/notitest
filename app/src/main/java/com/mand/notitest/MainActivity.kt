@@ -1,19 +1,42 @@
 package com.mand.notitest
+import android.Manifest
+import android.annotation.SuppressLint
 import android.app.NotificationChannel
 import android.app.NotificationManager
+import android.content.pm.PackageManager
 import android.graphics.Color
 import android.os.Build
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
+import androidx.core.app.ActivityCompat
 import androidx.core.app.NotificationCompat
 import androidx.core.app.NotificationManagerCompat
 
+
 class MainActivity : AppCompatActivity() {
+    var builder1: NotificationCompat.Builder? = null
+    @SuppressLint("MissingPermission")
+    override fun onRequestPermissionsResult(
+        requestCode: Int,
+        permissions: Array<String?>,
+        grantResults: IntArray
+    ) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults)
+        if (requestCode == 1) {
+            if (grantResults.isNotEmpty() && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                // Permission granted
+                with(NotificationManagerCompat.from(this)) {
+                    builder1?.let { notify(1, it.build()) }
+                    Toast.makeText(applicationContext,getString(R.string.sent_noti),Toast.LENGTH_SHORT).show()
+                }
+            }
+        }
+    }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -46,39 +69,63 @@ class MainActivity : AppCompatActivity() {
             //var textUp = "Siema "+text1HelloWorld.text
             //powiadomienie
             if (edittext.text.toString() != "" && edittextName.text.toString() != ""){
-                val builder1 = NotificationCompat.Builder(this, "jakischannelid")
+                builder1 = NotificationCompat.Builder(this, "jakischannelid")
                     .setSmallIcon(R.mipmap.ic_notitest)
                     .setContentTitle(edittextName.text)
                     //.setContentText("textUp")
                     .setContentText(edittext.text)
                     .setPriority(NotificationCompat.PRIORITY_DEFAULT)
                 with(NotificationManagerCompat.from(this)){
-                    notify(1, builder1.build())
+                    if (ActivityCompat.checkSelfPermission(
+                            this@MainActivity,
+                            Manifest.permission.POST_NOTIFICATIONS
+                        ) != PackageManager.PERMISSION_GRANTED
+                    ) {
+                        ActivityCompat.requestPermissions(this@MainActivity, arrayOf(Manifest.permission.POST_NOTIFICATIONS),1)
+                        return@with
+                    }
+                    notify(1, builder1!!.build())
+                    Toast.makeText(applicationContext,getString(R.string.sent_noti),Toast.LENGTH_SHORT).show()
                 }
-                Toast.makeText(applicationContext,getString(R.string.sent_noti),Toast.LENGTH_SHORT).show()
             }else{
-                val builder1 = NotificationCompat.Builder(this, "jakischannelid")
+                builder1 = NotificationCompat.Builder(this, "jakischannelid")
                     .setSmallIcon(R.mipmap.ic_notitest)
                     .setContentTitle(getString(R.string.default_title))
                     //.setContentText("textUp")
                     .setContentText(getString(R.string.default_text))
                     .setPriority(NotificationCompat.PRIORITY_DEFAULT)
                 with(NotificationManagerCompat.from(this)){
-                    notify(2, builder1.build())
+                    if (ActivityCompat.checkSelfPermission(
+                            this@MainActivity,
+                            Manifest.permission.POST_NOTIFICATIONS
+                        ) != PackageManager.PERMISSION_GRANTED
+                    ) {
+                        ActivityCompat.requestPermissions(this@MainActivity, arrayOf(Manifest.permission.POST_NOTIFICATIONS),1)
+                        return@with
+                    }
+                    notify(2, builder1!!.build())
+                    Toast.makeText(applicationContext,getString(R.string.sent_noti),Toast.LENGTH_SHORT).show()
                 }
-                Toast.makeText(applicationContext,getString(R.string.sent_noti),Toast.LENGTH_SHORT).show()
             }
         }
         var intent = getIntent()
         if(intent!!.action == "custom.actions.intent.SEND_TEST_NOTI"){
-            val builder1 = NotificationCompat.Builder(this, "jakischannelid")
+            builder1 = NotificationCompat.Builder(this, "jakischannelid")
                 .setSmallIcon(R.mipmap.ic_notitest)
                 .setContentTitle(getString(R.string.default_title))
                 //.setContentText("textUp")
                 .setContentText(getString(R.string.default_text))
                 .setPriority(NotificationCompat.PRIORITY_DEFAULT)
             with(NotificationManagerCompat.from(this)){
-                notify(3, builder1.build())
+                if (ActivityCompat.checkSelfPermission(
+                        this@MainActivity,
+                        Manifest.permission.POST_NOTIFICATIONS
+                    ) != PackageManager.PERMISSION_GRANTED
+                ) {
+                    ActivityCompat.requestPermissions(this@MainActivity, arrayOf(Manifest.permission.POST_NOTIFICATIONS),1)
+                    return@with
+                }
+                notify(3, builder1!!.build())
             }
         }
     }
